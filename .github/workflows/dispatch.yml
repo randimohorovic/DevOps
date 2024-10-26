@@ -38,3 +38,15 @@ jobs:
 
     - name: List Processes
       run: ps aux
+
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12' 
+    
+
+
+    - name: Install Requirements
+      run: pip install -r requirements.txt
+
+    - name: Generate report 
+      run: python run-report.py
